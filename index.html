@@ -168,7 +168,7 @@
 
   /* ---------- INFO STRIP ---------- */
   .strip{
-    display:grid; grid-template-columns:repeat(3,1fr);
+    display:grid; grid-template-columns:repeat(4,1fr);
     border-bottom:1px solid var(--line);
   }
   .strip .item{
@@ -180,6 +180,13 @@
     font-size:14px; letter-spacing:2px; color:var(--white); font-weight:600; margin-bottom:6px;
   }
   .strip .item p{font-size:13px; color:var(--text-soft); line-height:1.6; font-family:'Manrope',sans-serif;}
+  .strip .item.ship{
+    background:linear-gradient(160deg, rgba(184,31,44,0.16), rgba(184,31,44,0.02));
+    position:relative;
+  }
+  .strip .item.ship h3{color:var(--white-pure); display:flex; align-items:center; gap:8px;}
+  .strip .item.ship h3::before{content:"🇧🇷"; font-size:15px;}
+  .strip .item.ship p{color:var(--silver);}
 
   /* ---------- STOCK SECTION ---------- */
   .stock{padding:90px 28px 40px; max-width:1280px; margin:0 auto;}
@@ -221,6 +228,10 @@
   .card .info{padding:20px 20px 22px; display:flex; flex-direction:column; gap:14px; flex:1;}
   .card .club{font-size:11px; letter-spacing:2px; color:var(--red); font-weight:500;}
   .card .name{font-size:18px; letter-spacing:0.5px; color:var(--white); font-weight:600; line-height:1.25;}
+
+  .card .price{display:flex; align-items:baseline; gap:6px;}
+  .card .price .cur{font-family:'Oswald',sans-serif; font-size:12px; letter-spacing:1.5px; color:var(--red); font-weight:600;}
+  .card .price .val{font-family:'Oswald',sans-serif; font-size:25px; letter-spacing:0.5px; color:var(--white-pure); font-weight:700;}
 
   .sizes{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:auto;}
   .sizes .tag-label{font-size:10px; color:var(--silver-dim); letter-spacing:1.5px; margin-right:2px; font-family:'Manrope',sans-serif; text-transform:none;}
@@ -520,6 +531,10 @@
     <h3>Disponibilidade</h3>
     <p>Algumas camisas dependem do fornecedor — consulte antes de fechar o pedido.</p>
   </div>
+  <div class="item ship">
+    <h3>Envio nacional</h3>
+    <p>Enviamos para todo o Brasil — envio rápido e rastreado até a sua casa.</p>
+  </div>
 </section>
 
 <section class="stock" id="estoque">
@@ -538,6 +553,7 @@
           <div class="club">Manchester United</div>
           <div class="name">Camisa I 26/27</div>
         </div>
+        <div class="price"><span class="cur">R$</span><span class="val">139,90</span></div>
         <div class="sizes">
           <span class="tag-label">Tam:</span>
           <span class="chip">G</span><span class="chip">GG</span>
@@ -553,6 +569,7 @@
           <div class="club">Palmeiras</div>
           <div class="name">Camisa I 26/27</div>
         </div>
+        <div class="price"><span class="cur">R$</span><span class="val">139,90</span></div>
         <div class="sizes">
           <span class="tag-label">Tam:</span>
           <span class="chip">GG</span>
@@ -568,6 +585,7 @@
           <div class="club">Palmeiras</div>
           <div class="name">Camisa II 26/27</div>
         </div>
+        <div class="price"><span class="cur">R$</span><span class="val">139,90</span></div>
         <div class="sizes">
           <span class="tag-label">Tam:</span>
           <span class="chip">G</span>
@@ -583,6 +601,7 @@
           <div class="club">Arsenal</div>
           <div class="name">Camisa I 26/27</div>
         </div>
+        <div class="price"><span class="cur">R$</span><span class="val">139,90</span></div>
         <div class="sizes">
           <span class="tag-label">Tam:</span>
           <span class="chip">G</span><span class="chip">GG</span>
@@ -598,6 +617,7 @@
           <div class="club">Napoli</div>
           <div class="name">Camisa I 25/26</div>
         </div>
+        <div class="price"><span class="cur">R$</span><span class="val">109,90</span></div>
         <div class="sizes">
           <span class="tag-label">Tam:</span>
           <span class="chip">GG</span>
@@ -613,6 +633,7 @@
           <div class="club">Napoli</div>
           <div class="name">Camisa II 25/26</div>
         </div>
+        <div class="price"><span class="cur">R$</span><span class="val">109,90</span></div>
         <div class="sizes">
           <span class="tag-label">Tam:</span>
           <span class="chip">G</span>
@@ -628,9 +649,10 @@
           <div class="club">Real Madrid</div>
           <div class="name">Camisa III 25/26</div>
         </div>
+        <div class="price"><span class="cur">R$</span><span class="val">109,90</span></div>
         <div class="sizes">
           <span class="tag-label">Tam:</span>
-          <span class="chip">M</span>
+          <span class="chip">GG</span>
         </div>
         <a class="consult" href="https://wa.me/5519996075059?text=Fala%2C%20V%C3%A9rtice%21%20%E2%9A%BD%20Vi%20a%20camisa%20Real%20Madrid%20III%2025%2F26%20no%20site%20e%20quero%20saber%20mais%20%E2%80%94%20tem%20no%20meu%20tamanho%3F" target="_blank" rel="noopener">Consultar no WhatsApp</a>
       </div>
@@ -643,6 +665,7 @@
           <div class="club">PSG</div>
           <div class="name">Camisa I 25/26</div>
         </div>
+        <div class="price"><span class="cur">R$</span><span class="val">109,90</span></div>
         <div class="sizes">
           <span class="tag-label">Tam:</span>
           <span class="chip">G</span>
