@@ -2408,8 +2408,7 @@
         <div class="price"><span class="old">R$ 179,90</span><span class="cur">R$</span><span class="val">139,90</span></div>
         <div class="sizes">
           <span class="tag-label">Tam:</span>
-          <span class="chip">P</span><span class="chip">M</span><span class="chip">G</span><span class="chip">GG</span>
-        </div>
+          <span class="chip">20</span><span class="chip">22</span><span class="chip">24</span><span class="chip">26</span><span class="chip">28</span></div>
         <p class="order-note">Disponibilidade sujeita à confirmação pelo WhatsApp.</p>
         <div class="view-hint">Ver produto <span>&rarr;</span></div>
         <a class="consult" href="https://wa.me/5519996075059?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20conjunto%20infantil%20do%20Brasil%2026/27.%20Gostaria%20de%20consultar%20tamanhos%20e%20valor." target="_blank" rel="noopener">Tenho interesse</a>
@@ -2873,7 +2872,7 @@
       { id:"espanha-i-2627", club:"Espanha", name:"Camisa I 26/27", status:"preorder", price:"R$ 109,90", oldPrice:"R$ 149,90", sizes:{P:true,M:true,G:true,GG:true} },
       { id:"brasil-i-2627", club:"Brasil", name:"Camisa I 26/27", status:"preorder", price:"R$ 99,90", oldPrice:"R$ 149,90", sizes:{P:true,M:true,G:true,GG:true} },
       { id:"brasil-ii-2627", club:"Brasil", name:"Camisa II 26/27", status:"preorder", price:"R$ 149,90", oldPrice:"R$ 189,90", sizes:{P:true,M:true,G:true,GG:true} },
-      { id:"brasil-infantil-2627", club:"Brasil", name:"Conjunto Infantil 26/27", status:"preorder", price:"R$ 139,90", oldPrice:"R$ 179,90", sizes:{P:true,M:true,G:true,GG:true} },
+      { id:"brasil-infantil-2627", club:"Brasil", name:"Conjunto Infantil 26/27", status:"preorder", price:"R$ 139,90", oldPrice:"R$ 179,90", sizeList:["20","22","24","26","28"], sizes:{"20":true,"22":true,"24":true,"26":true,"28":true} },
       { id:"alemanha-i-2627", club:"Alemanha", name:"Camisa I 26/27", status:"preorder", price:"R$ 149,90", oldPrice:"R$ 189,90", sizes:{P:true,M:true,G:true,GG:true} },
       { id:"franca-i-2627", club:"França", name:"Camisa I 26/27", status:"preorder", price:"R$ 149,90", oldPrice:"R$ 189,90", sizes:{P:true,M:true,G:true,GG:true} },
       { id:"liverpool-i-2627", club:"Liverpool", name:"Camisa I 26/27", status:"preorder", price:"R$ 179,90", oldPrice:"R$ 219,90", sizes:{P:true,M:true,G:true,GG:true} },
@@ -2990,7 +2989,7 @@
 
       var opts = document.getElementById('pv-size-options');
       opts.innerHTML = '';
-      SIZES.forEach(function(sz){
+      (p.sizeList || SIZES).forEach(function(sz){
         var available = !!p.sizes[sz];
         var btn = document.createElement('button');
         btn.type = 'button';
